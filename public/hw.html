@@ -1,0 +1,94 @@
+<!-- Hello have fun reading the code lol-->
+<!-- made by breadA [breadA#3012 (discord1d)] -->
+<html>
+  <head>
+    <!-- i will see what your doing -->
+    <title>Homework log</title>
+    <!--LIBS-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+
+  </head>
+
+  <!-- Jumbotron -->
+  <body onload="clearfield(); insert()">
+    <div class="jumbotron rounded">
+      <h1 class="text-center" style="margin-right: 10px">Homework Log</h1>
+      <br />
+      <form class="col-md" onsubmit="return false" class="container-fluid">
+        <h5 class="text-dark">Write the date or day of the homework:</h5>
+        <input type="text" class="form-control" required="true" id="name" />
+        <h5 class="text-dark">Homework to be done:</h5>
+
+        <input type="text" class="form-control" required="true" id="class" />
+        <br />
+        <button onclick="insert()" class="btn btn-danger btn-l">Submit</button>
+      </form>
+    </div>
+    <!-- Jumbotron end code -->
+    <input
+      class="form-control"
+      id="myInput"
+      type="text"
+      placeholder="Search.."
+    />
+    <!-- table -->
+    <table
+      id="result"
+      class="table"
+      style="background-color: rgb(250, 244, 244)"
+    >
+      <tbody>
+        <thead>
+          <tr>
+            <td>Day or Date</td>
+            <td>H.W</td>
+            <!-- This heading is for actions buttons that will be there for every record in table -->
+            <td>Actions</td>
+          </tr>
+        </thead>
+      </tbody>
+    </table>
+    <!-- end table -->
+
+    <!-- delete table -->
+    <center>
+      <button
+        type="button"
+        onclick="localStorage.clear() , rerenderTable(); areyousure()"
+        class="btn btn-dark ;"
+        title="Click this button only if you want to delete all the cells"
+      >
+        Click here to delete ALL
+      </button>
+      <!-- delete table end-->
+    </center>
+    <!-- enlarge -->
+
+    <!-- enlarge end -->
+    <br />
+    <center>
+      <button type="button" onclick="save()" class="btn btn-dark">Save</button>
+    </center>
+    <div id="img-display"></div>
+
+    <!--TO DO: Done after 38 mins -->
+    <div class="alert alert-danger" id="errorbox" style="display: none">
+      <strong>Record already exists</strong>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://github.com/niklasvh/html2canvas/releases/download/0.5.0-alpha1/html2canvas.js"
+  ></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/main.js"></script>
+</html>
+
